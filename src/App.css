@@ -1,0 +1,265 @@
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.dark {
+  background-color: #242424;
+  color: #ffff;
+}
+
+.dark svg {
+  color: #fff;
+}
+
+.dark .todo-form button {
+  border: 1px solid #fff;
+}
+
+.dark .todo-form input {
+  border-bottom: 1px solid #ffff;
+  color: #fff;
+}
+
+.dark .todo-form input::placeholder {
+  color: #fff;
+}
+
+.dark .todo-list-items li button svg {
+  color: #fff;
+}
+
+/* App components */
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.switcher-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(128, 128, 128, 0.3);
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #ffff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.todo-app-wrapper {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* End App components */
+
+/* UserName components */
+
+.username-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.username-content {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+input {
+  width: 250px;
+  background: transparent;
+  color: rgba(128, 128, 128, 0.8);
+  outline: none;
+  border: none;
+  font-size: 20px;
+  border-bottom: 1px solid #242424;
+  padding: 5px 0;
+}
+
+input::placeholder {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgba(128, 128, 128, 0.8);
+}
+
+.send-user-btn {
+  background: none;
+  color: #242424;
+  border: none;
+  cursor: pointer;
+}
+
+.fade-out-animation {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* end UserName components */
+
+/* TodoForm components */
+
+.todo-form {
+  display: flex;
+  gap: 20px;
+}
+
+.todo-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #242424;
+  transition: background 0.5s ease;
+  color: #242424;
+}
+
+.todo-form button:hover {
+  background-color: #242424;
+  color: #fff;
+}
+
+/* TodoList components */
+
+.todo-list-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.todo-list-items li label {
+  flex-grow: 1;
+}
+.todo-list-items input {
+  width: auto;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.todo-list-items li button {
+  margin: 0 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-list-items li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list-items li button svg {
+  font-size: 20px;
+  color: #242424;
+}
+
+.todo-list-items input:checked + label {
+  text-decoration: line-through;
+  color: rgba(128, 128, 128, 0.5);
+}
